@@ -6,6 +6,7 @@ public class SnakeAndLadder {
         //Initialising a variable to hold the value of position of player on the board
         int position = 0;
         String optionValue = "";
+        int diceRolled = 0;
 
         // Using random method to generate a random number between 1 and 6
         Random r = new Random();
@@ -30,6 +31,7 @@ public class SnakeAndLadder {
 
             // Using random method to generate a random number between 1 and 6
             int roll = r.nextInt(6) + 1;
+            diceRolled++;
             System.out.println("The value of the die roll is " + roll);
 
             if (optionValue == "No Play") {
@@ -51,5 +53,6 @@ public class SnakeAndLadder {
             System.out.println("The Position of the Player is " + position);
 
         }
+        System.out.println("Number of times dice rolled is " +diceRolled);
     }
 }

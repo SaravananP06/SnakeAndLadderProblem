@@ -37,6 +37,10 @@ public class SnakeAndLadder {
             } else if (optionValue == "Ladder") {
                 System.out.println("Ladder Option rolled. Move Forward");
                 position = position + roll;
+                if (position >100){
+                    System.out.println("Sorry Can't go forward");
+                    position = position - roll;
+                }
             } else {
                 System.out.println("Snake Option rolled. Move Backwards");
                 position = position - roll;
